@@ -1,5 +1,6 @@
 #Hello World!
 print("Hello world!")
+print("Hello world!")
 print("\n")
 
 #Variables
@@ -92,9 +93,19 @@ result of a^b is 9
 print("a XOR b: ",a^b)
 
 #shifting
+'''
+a = 3, in binary form a is  0011
+Right shift adds 0 to left most bit and ignore 0001
+result of a>>1 is 1 (fundamentally it divides by 2)
+'''
 print("Right Shift 1: ",a>>1)
 print("Right Shift 2: ",a>>2)
 
+'''
+b = 10, in binary form a is  1010
+Right shift adds 0 to right most bit 10100
+result of b<<1 is 20 (fundamentally it multiplies by 2)
+'''
 print("Left Shift 1: ",b<<1)
 print("Left Shift 2: ",b<<2)
 
@@ -201,8 +212,6 @@ e.clear()
 print("List e after clearing: ", e)
 
 print("\n")
-
-
 #________________________________________________________________________________________________________
 
 #String Operations
@@ -249,6 +258,17 @@ print("Alternative Characters of h from index 0 till end: ", h[::2])
 
 #reversing
 print("All Characters of h in reverse order", h[::-1])
+
+str1 = "hi"
+str2 = "GCEK"
+str3 = str1 + " " + str2
+print(str3*3)
+
+print(g)
+str4 = ''.join(g)
+print(str4)
+str4 = '-'.join(g)
+print(str4)
 
 print("\n")
 
@@ -308,7 +328,7 @@ print("Iteration with for loop on list f")
 lengthE = len(f)
 idx = 0
 while(idx < lengthE):
-    f[idx] += idx
+    f[idx] += idx**2
     idx += 1
 print("Result of array manipulation with While loop:", f)
 
@@ -322,15 +342,15 @@ for i in range(0,4):
 print("\n")
 print("Printing values in f iteratively using for loop")
 
-for i in f:
+for i in f[::-1]:
     print(i, end=' ')
 
 print("\n")
 
 
 #________________________________________________________________________________________________________
-
 #User Defined Functions
+
 print("User defined functions")
 
 def add(a,b):
@@ -348,7 +368,7 @@ def arraySum(arr):
 
 print("Result of add function call:",add(1,2))
 print("Result of diff function call:", diff(1123123,123121))
-print("Result of arraySum function call:", arraySum([i for i in range(10)]))
+print("Result of arraySum function call:", arraySum(f))
 
 print("\n")
 
@@ -356,8 +376,19 @@ print("\n")
 #___________________________________________________________________________________________________________
 #Misc
 
-print("Miscellaneous")
+print("range method")
 
+print("Range with value 10: ",*range(10))
+print("Range from 0 to 10: ",*range(0,10))
+print("Range from 0 to 10 with jump  2: ",*range(0,10,2))
+print("Range from 10 to 0 with jump -1: ",*range(10,0,-1))
+print("Range from 10 to 0 with jump -2: ",*range(10,0,-2))
+
+print("List comprehension")
+'''
+List comprehension is a method of creating a list with a syntax
+[ result_variable for result_variable in Iterable]
+'''
 x = [i for i in range(0,10)]
 print("Value of x on list comprehension:",x)
 
@@ -371,3 +402,5 @@ w = [i for i in range(20,0,-1)]
 print("Value of w on list comprehension:",w)
 
 print("\n")
+
+#___________________________________________________________________________________________________________
