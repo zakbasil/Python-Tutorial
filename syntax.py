@@ -128,7 +128,7 @@ print(e)
 
 #Length
 '''
-Variable e is a list [1,2,3]
+Variable e is a list [1,2,3,4,5,6,7,8]
 len() returns Length of the list
 Result of len(e) is 8
 '''
@@ -139,10 +139,14 @@ print("First Element of e: ", e[0])
 
 #last element of list
 l = len(e)
-print("Last Elelment of e: ",e[l-1])
+print("Last Element of e: ",e[l-1])
 
 #last element of list (-ve indexing)
 print("Last  Element of e with negative index:", e[-1])
+print("Element of e with negative index 2:", e[-2])
+print("Element of e with negative index 3:", e[-3])
+print("Element of e with negative index 4:", e[-4])
+#print("Error ex_ out of bound:", e[8])
 
 #slicing
 '''
@@ -150,14 +154,18 @@ List in Python can have three params _list[start:end:index_jump]
 '''
 print("Elements of e from index 0 to until index 4: ", e[0:4])
 print("Elements of e from index 0 to until index 8: ", e[0:8])
+print("Elements of e from index 1 to until index 4: ", e[1:4])
+print("Elements of e from index 2 to until index 5: ", e[2:5])
 
 print("Elements of e from index 0 to until index 2 without start index: ", e[:2])
-
-print("All Elelements from index 0 till end: ", e[0:])
+print("All Elements from index 0 till end: ", e[0:])
+print("All Elements from index 0 till end: ", e[:])
+print("All Elements from negative index 4 till end: ", e[-4:])
 print("All Elements from index 1 till end: ", e[1:])
 
 #jumping
 print("Alternative Elements of e from index 0 till end: ", e[::2]) 
+print("Alternative Elements of e from index 1 till end: ", e[1::2]) 
 
 #reversing
 print("All Elements of e in reverse order", e[::-1])
@@ -177,7 +185,16 @@ print("List e after inserting 3232 at index 2: ", e)
 #Extending a list
 newList = [111,222,333,444,555]
 e.extend(newList)
-print("List e after inserting 3232 at index 2: ", e)
+print("List e after extending e with newList: ", e)
+
+
+#Remove an element from the list
+e.remove(8)
+print("List after remove:",e)
+
+#Pop and element from the list
+e.pop(-1)
+print("List after pop:",e)
 
 #Clearing a list
 e.clear()
